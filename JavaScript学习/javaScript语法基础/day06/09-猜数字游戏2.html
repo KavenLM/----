@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //猜1-50之间的数字，只有10此机会
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        var random = getRandom(1, 50);
+        var count = 0;
+        while (true) {
+            if (count < 10) {
+                var guess = prompt('开始猜吧，1-50之间');
+                count++;
+                if (guess > random) {
+                    alert('猜大了sb');
+                } else if (guess < random) {
+                    alert('猜小了zz');
+                } else {
+                    alert('你真nb，猜对了');
+                    break;
+                }
+            } else {
+                alert('你TM是智障吗猜了10次了还没猜对');
+                break;
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

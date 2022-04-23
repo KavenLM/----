@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <script>
+        // 事件对象
+        var div = document.querySelector('div');
+        div.onclick = function(e){//e就是事件对象，只有当绑定了事件才存在
+           // e = e || window.e;  兼容性写法，window.e是ie6.7.8的写法
+            console.log(e);
+        }
+
+        div.addEventListener('click',function(e){
+            console.log(e);
+        });
+    </script>
+</body>
+</html>

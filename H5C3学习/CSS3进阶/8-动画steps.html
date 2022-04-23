@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画steps()</title>
+    <style>
+        div {
+            width: 0;
+            height: 30px;
+            font-size: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: pink;
+            /* steps 就是动画分成几步俩完成，写了setps()就不要再写linear ease了 */
+            animation: w 5s steps(10) forwards;
+        }
+        @keyframes w {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>世纪佳缘我在这里等你</div>
+</body>
+</html>

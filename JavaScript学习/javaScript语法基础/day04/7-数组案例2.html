@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //将数组中大于10的值取出来，放进新的数组
+        // var arr = [2,0,6,1,77,0,52,0,25,7];
+        // var newArr = [];
+        // var index = 0;
+        // arr.forEach(i => {
+        //     if(i < 10){
+        //         return
+        //     }
+        //     newArr[index] = i;
+        //     index++;
+        // });
+        // console.log(newArr);
+
+
+        // 方法二
+        var arr = [2,0,6,1,77,0,52,0,25,7];
+        var newArr = [];
+        // var index = 0; index可以用newArr.length代替
+        arr.forEach(i => {
+            if(i < 10){
+                return
+            }
+            newArr[newArr.length] = i;
+        });
+        console.log(newArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

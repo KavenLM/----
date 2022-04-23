@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 200px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        div,p {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: pink;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <button>显示系统时间</button>
+    <div>这里显示时间</div>
+    <p>
+        <strong>12313</strong>
+    </p>
+    <script>
+        //需求，点击按钮，在时间区域显示当前系统时间
+        //1.获取事件源
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        //2.绑定事件
+        btn.onclick = function () {
+            // div.innerText = '2020.1.2';
+            //3.编写事件驱动程序
+            div.innerHTML = getDate();
+        }
+        function getDate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;//month的索引0-11
+            var day = date.getDate();
+            var xingqi = date.getDay();//星期的索引为0-6，星期天为0 星期六为6
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            //格式化日期
+            return '今天是：' + year + '年' + month + '月' + day + '日' + arr[xingqi];
+        }
+
+        //innerHTML与innerText的区别，innerHTML能够是识别标签，并保留格式(空格和换行)
+        var p = document.querySelector('p');
+        // p.innerHTML = '<strong>123</strong';
+        console.log(p.innerHTML);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建对象的三种方式
+        //1.利用字面量创建
+        //2.利用new Object创建对象
+        //3.利用构造函数创建对象
+
+        
+        var keke = {
+            name : '可可',
+            type : '阿拉斯加犬',
+            age : '5岁',
+            color :'棕红色',
+            bark : function(){
+                console.log('汪汪汪');
+            },
+            showFilm : function(){
+                console.log('演电影');
+            }
+        }
+        console.log(keke);
+
+        //对象属性的调用方式有两种 1、对象名.属性名  2、对象名['属性名']
+        console.log(keke.name);
+        console.log(keke['name']);
+        console.log(keke.color);
+        console.log(keke.age);
+
+        //对象方法的调用方式 对象名.方法名(参数)
+        keke.bark();
+        keke.showFilm();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建对象
+        // var obj = {
+        //     name : 'ldh',
+        //     age : '20',
+        //     sex : '男',
+        //     fun : function(){
+        //         console.log('冰雨');
+        //     }
+        // }
+
+        // var obj = new Object();
+        // obj.name = 'ldh';
+        // obj.age = '20';
+        // obj.sex = '男';
+        // obj.fun = function(){
+        //     console.log('冰雨2');
+        // }    
+
+        function Star(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+        }
+        var obj = new Star('ldh',22,'男');
+        obj.sing('冰雨');
+
+        //遍历对象
+        for (var k in obj) {
+            console.log(k);//对象的属性
+            console.log(obj[k]);//属性值
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

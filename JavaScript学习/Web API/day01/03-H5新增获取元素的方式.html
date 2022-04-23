@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div class="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品1</li>
+            <li>产品2</li>
+            <li>产品3</li>
+            <li>产品4</li>
+            <li>产品5</li>
+        </ul>
+    </div>
+
+    <script>
+        //1.document.getElementsByClassName('类名')根据类名获得某些元素的集合
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+
+
+        //2.1 document.querySelector('选择器') 返回选择器对应元素的第一个元素
+        var box1 = document.querySelector('.box');
+        console.log(box1);
+        var li1 = document.querySelector('.nav ul li');
+        console.log(li1);
+        var li2 = document.querySelector('ul li:nth-child(2)');
+        console.log(li2);
+
+        //2.2 document.querySelectorAll('选择器'); 返回选择器对应元素的所有元素
+        var lis = document.querySelectorAll('ul li');
+        console.log(lis);
+        var lis2 = document.querySelectorAll('ul li:nth-of-type(2n)');
+        console.log(lis2);
+
+    </script>
+</body>
+
+</html>

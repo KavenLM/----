@@ -1,0 +1,3 @@
+打开vscode在 首选项-设置 里搜索emmet.include 在setting.json中编辑。
+将给定的两行代码粘贴到vscode里面。
+记得要加逗号。

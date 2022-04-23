@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 10px solid red;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容</div>
+    <script>
+        var div = document.querySelector('div');
+        //scorllHeight内容的高度，包括超出父元素高度的内容   不包含边框
+        console.log(div.scrollHeight);
+        console.log(div.clientHeight);
+        //scroll事件 ， div.scrollTop触发滑动事件时，滑动至上方内容的高度(从上边框下沿开始算)
+        div.addEventListener('scroll',function(){
+            console.log(div.scrollTop);
+        });
+        
+    </script>
+</body>
+</html>

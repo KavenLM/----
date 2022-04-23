@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 我们js引擎运行js 分为两步：  预解析  代码执行
+        // (1). 预解析 js引擎会把js 里面所有的 var  还有 function 提升到当前作用域的最前面
+        // (2). 代码执行  按照代码书写的顺序从上往下执行
+        // 2. 预解析分为 变量预解析（变量提升） 和 函数预解析（函数提升）
+        // (1) 变量提升 就是把所有的变量声明提升到当前的作用域最前面  不提升赋值操作
+        // (2) 函数提升 就是把所有的函数声明提升到当前作用域的最前面  不调用函数
+
+
+        // console.log(num);//报错
+        //1.变量提升，把所有变量的声明提升到当前作用域的最前面 不提升赋值操作。
+        console.log(num2); //undefined
+        var num2 = 1;
+
+        // 执行过程相当于
+        // var num2;
+        // console.log(num2);
+        // num2 = 1;
+
+
+
+
+        //2.函数提升，把所有函数的声明提升到当前作用域的最前面 不调用
+        fn(); //11
+        function fn() {
+            console.log(11);
+        }
+
+
+
+
+
+        func();//报错
+        var func = function () {
+            console.log(22);
+        }
+        //执行过程相当于
+        // var func;
+        // func();
+        // func = function(){
+        //     console.log(22);
+        // }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

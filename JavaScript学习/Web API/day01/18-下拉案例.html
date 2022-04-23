@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉案例</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?4at5kk');
+            src: url('fonts/icomoon.eot?4at5kk#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?4at5kk') format('truetype'),
+                url('fonts/icomoon.woff?4at5kk') format('woff'),
+                url('fonts/icomoon.svg?4at5kk#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: relative;
+            width: 50px;
+            height: 20px;
+            border: 1px solid red;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .box i {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            font-family: 'icomoon';
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <dl>
+            <dt>数码 <i></i></dt>
+            <dd>手机</dd>
+            <dd>电脑</dd>
+            <dd>平板</dd>
+        </dl>
+    </div>
+
+    <script>
+        var box = document.querySelector('.box');
+        box.onmouseover = function on() {
+            this.style.overflow = 'visible'
+            
+        }
+        box.onmouseout = function out() {
+            this.style.overflow = 'hidden'
+        }
+    </script>
+</body>
+
+</html>

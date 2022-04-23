@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //keydown，keyup获取所有按键，不区分大小写
+        // document.onkeydown = function(e){
+        //     console.log('down'+e.keyCode);
+        //     // console.log('down'+e.code);
+        // }
+    
+        //属性keycode返回ASCII码，已过时
+        document.addEventListener('keydown', function (e) {
+            // console.log('down' + e.keyCode); 
+
+            //key代表触发事件的按键所对应的值，区分大小写
+            //code代表触发事件的物理按键
+            console.log('key:'+e.key);
+            console.log('code:'+e.code);
+        });
+        //keypress不能获取功能按键如 shif ctrl  ，区分大小写
+        document.addEventListener('keypress', function (e) {
+            // console.log('press' + e.keyCode);
+        });
+
+        document.addEventListener('keyup', function (e) {
+            // console.log('up' + e.keyCode);
+        });
+    </script>
+</body>
+
+</html>

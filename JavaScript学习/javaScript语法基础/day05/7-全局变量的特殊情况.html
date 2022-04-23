@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func(){
+            var num1 = 10;
+            num2 = 20; //特殊情况，在函数内部不适用var直接赋值的变量也是全局变量。
+        }
+        func();
+        // console.log(num1);//错误，num1是局部变量
+        console.log(num2); // 可以直接输出20 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

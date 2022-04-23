@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            float: left;
+            position: relative;
+            list-style: none;            
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+            /* 设置负值，将边框抵消 */
+            margin-left: -1px;
+
+            /*  */
+        }
+        /* 1.当鼠标停在li上时，边框换颜色 ,中间的li有一条边会被遮挡，所以用浮动 */
+        /* li:hover {
+            position: relative;
+            border-color: skyblue;
+        } */
+        /* 2.如果所有li上都有相对定位，那么就需要加上z-index */
+        li:hover {
+            z-index: 1;
+            border-color: skyblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

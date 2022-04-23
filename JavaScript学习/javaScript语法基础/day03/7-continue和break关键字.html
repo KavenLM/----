@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.continue跳过本次循环
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {//跳过能被7整除的数字
+                continue;
+            }
+            sum += i;
+        }
+        console.log('sum=' + sum);
+        // 2.break中断循环
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                console.log('第' + i + '个包子有虫，rnm退钱！');
+                break;
+            }
+            console.log('正在吃第' + i + '个包子');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

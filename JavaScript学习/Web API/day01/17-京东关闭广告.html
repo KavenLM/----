@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .box {
+            position: relative;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .box i {
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 20px;
+            line-height: 20px;   
+            color: #fff;        
+            background-color: rgba(3, 3, 3, .2);
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box w">
+        <img src="images/jd.jpg" alt="">
+        <i>×</i>
+        <script>
+            
+            var box = document.querySelector('.box');
+            var i = document.querySelector('.box i');
+            i.onclick = function func() {
+                box.style.display = 'none';
+            }
+        </script>
+    </div>
+</body>
+
+</html>

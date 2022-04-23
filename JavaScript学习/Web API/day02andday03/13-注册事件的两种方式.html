@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <script>
+
+        var btns = document.querySelectorAll('button');
+        //1.传统方式注册事件
+        btns[0].onclick = function () {
+            alert('大白兔');
+        }
+        //传统方式注册事件，同一事件只能注册一次，后面的会覆盖前面的事件
+        btns[0].onclick = function () {
+            alert('大灰狼');
+        }
+
+        //2.方法监听注册事件 addEventListener(type,listener);
+        //方法监听注册事件，同一事件可以注册多次，按顺序执行
+        
+        btns[1].addEventListener('click', function () {
+            alert('hello~');
+        });
+        btns[1].addEventListener('click', function () {
+            alert('world~');
+        });
+        //可以使用type是字符型，要加引号，不用加on；listener是执行函数，可以使用函数名。
+        function func() {
+            alert('ni hao ');
+        }
+        btns[1].addEventListener('click', func);
+    </script>
+</body>
+
+</html>

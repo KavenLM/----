@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //判断一个字符串'abcoefoxyozzopp'中出现最多的字符，并统计其次数。
+
+        // 思路：
+        // 1.核心算法：利用charAt(),遍历字符串。
+        // 2.把每个字符都存储给对象，如果对象没有改属性，就为 1， 如果存在了就 +1.
+        // 3.遍历对象，得到最大值和该字符。
+        var str = 'abcoefoxyozzopp';
+        var obj = new Object();
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (obj[chars]) {//如果obj中存在str.charAt[i]
+                obj[chars]++;
+            } else {
+                obj[chars] = 1;
+            }
+        }
+
+        var maxCount = 0;
+        var char = '';
+        for (var k in obj) {
+            if (obj[k] > maxCount) {
+                maxCount = obj[k];
+                char = k;
+            }
+        }
+
+
+
+
+
+
+        // var key = []; //用来存储obj对象的属性
+        // var value = []; //用来存储obj对象的值      
+        // for (var k in obj) { //将所有obj的属性值都装入value中
+        //     key.push(k);
+        //     value.push(obj[k]);
+        // }
+        // console.log(key);
+        // console.log(value);
+        // //使用Math.max(...arr)求数组最大值时，参数要加 ...
+        // var maxCount = Math.max(...value)//求value的最大值，即str中出现最多字符出现的次数
+        // console.log(maxCount);
+        // var index = value.indexOf(maxCount);//求最大值的下，
+        // var char = key[index] //求出对应的最大属性，即str中出现次数最多的字符
+        console.log('出现次数最多的字符为：' + char + '次数为' + maxCount + '次');
+
+        // var arr = [1, 2, 3];
+        // var max = Math.max(...arr);
+        // console.log(max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发送短信</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+
+            var btn = document.querySelector('button');
+            var time = 10;
+
+            btn.addEventListener('click', function () {
+                btn.disabled = true;
+                fn();
+                var timer = setInterval(fn, 1000);
+                function fn() {
+                    if (time == 0) {
+                        clearInterval(timer);
+                        btn.innerHTML = '发送';
+                        time = 10;
+                        btn.disabled = false;
+                    } else {
+                        btn.innerHTML = '请' + time + '秒钟后再次发送';
+                        time--;
+                    }
+
+
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入验证码"> <button>发送</button>
+
+</body>
+
+</html>

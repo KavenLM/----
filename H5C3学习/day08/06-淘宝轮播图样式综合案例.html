@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝综合案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            /* background-color: pink; */
+            margin: 100px auto;
+
+        }
+
+        .tb-promo img {
+
+            width: 520px;
+            height: 280px;
+            border-radius: 12px;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            top: 50%;
+            margin-top: -15px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        .prev {
+            left: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .next {
+
+            right: 0;
+
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+        }
+       .promo-nav ul {          
+           height: 12px;
+           line-height: 12px;
+       }
+        .promo-nav ul li {
+            float: left;
+            list-style: none;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            margin: 2px 3px;
+            border-radius: 4px;
+        }
+        .promo-nav .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="images/taobao.jpg" alt="">
+        <a href="#" class="prev">&lt;</a>
+        <a href="#" class="next">&gt;</a>
+        <div class="promo-nav">
+            <ul>
+                <li class="selected"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

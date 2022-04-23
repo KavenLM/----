@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        document.addEventListener('mousemove',function(e){
+            var x = e.pageX - div.offsetLeft;
+            var y = e.pageY - div.offsetTop;
+            if(x>=0&&x<=300&&y>=0&&y<=300){
+                console.log('坐标：'+x+','+y);
+            }else{
+                console.log('出界了');
+            }
+            
+        });
+    </script>
+</body>
+</html>

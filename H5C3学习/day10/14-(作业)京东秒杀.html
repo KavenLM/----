@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东秒杀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #F6F6F6;
+        }
+        a {
+            text-decoration: none;
+        }
+        i,em {
+            font-style: normal;
+        }
+        img {
+            vertical-align: middle;
+        }
+
+        .box {
+            width: 290px;
+            height: 400px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            /* margin: 100px auto; */
+
+        }
+
+        .box .head>img {
+            position: relative;
+            top: 0;
+            height: 200px;
+            transition: all .3s;
+        }
+
+        .box .head:hover img {
+            top: -10px;
+
+
+        }
+
+        .box .head h4 {
+            width: 250px;
+            height: 20px;
+            line-height: 20px;
+            font-weight: 400;
+            font-size: 14px;
+            margin: 20px -10px 9px 0px;
+            text-align: left;
+
+        }
+
+        .box .head p {
+            width: 250px;
+            height: 21px;
+            margin-right: -10px;
+            text-align: left;
+            /* background-color: red; */
+        }
+
+        .box .head p>img {
+            display: inline-block;
+            width: 40px;
+            height: 19px;
+            margin: -3px 2px 0 0;
+        }
+
+        .box .foot {
+            width: 250px;
+            height: 100px;
+            /* background-color: pink; */
+        }
+
+        .box .foot .left {
+            /* display: inline-block; */
+            float: left;
+            width: 170px;
+            height: 100px;
+            text-align: left;
+        }
+
+        .box .foot .right {
+            /* display: inline-block; */
+            float: right;
+            width: 80px;
+            height: 100px;
+        }
+
+        .box .foot .left .price .lowest {
+            position: relative;
+            display: inline-block;
+            margin-top: 8px;
+            padding: 0 8px;
+            color: #A399AD;
+            background-color: #E6E6E6;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+
+        
+
+        .box .foot .left .price .lowest::after {
+            position: absolute;
+            top: 15px;
+            left: 40px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-color: #E6E6E6 transparent transparent transparent;
+            border-width: 3px;
+            border-style: solid;
+        }
+        .box .foot .left .price .price_now {
+            display: inline-block;
+            margin-top: 8px;
+        }
+        .box .foot .left .price .price_now em{
+            margin-top: 8px;
+            font-size: 10px;
+            color: #E01222;
+            font-weight: 700;
+            margin-right: -5px;
+        }
+        .box .foot .left .price .price_now {
+            font-size: 17px;
+            color: #E01222;
+        }
+        .box .foot .left .price .price_pre {
+            font-size: 9px;
+            color: #999999;
+            text-decoration: line-through;
+        }
+        .box .foot .left .progress i {
+            font-size: 12px;
+            color: #666666;
+        }
+        .box .foot .left .progress .bar {
+            position: relative;
+            display: inline-block;
+            width: 88px;
+            height: 8px;
+            background-color: #E6E6E6;
+            border-radius: 4px;
+        }
+        .box .foot .left .progress .bar .bar_in {
+            position: absolute;
+            left: 0;
+            width: 15%;
+            height: 8px;
+            background-color: red;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            transition: all .3s;
+
+        }
+        .box .foot .left .progress .bar:hover .bar_in {
+            width: 75%;
+        }
+        .box .foot .left .progress {
+            display: inline-block;
+            margin-top: 8px;
+        }
+        .box .foot .right {
+            position: relative;
+        }
+        .box .foot .right a {
+            position: absolute;
+            right: -20px;
+            top: 40px;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #DF0021;
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">
+            <img src="images/ms.jpg" alt="">
+            <h4>小米11 5G 8GB+128GB 烟紫</h4>
+            <p>
+                <img src="images/ziying.png" alt="">四曲面柔性屏
+            </p>
+        </div>
+
+        <div class="foot">
+            <span class="left">
+                <span class="price">
+                    <span class="lowest">
+                        18天历史最低价
+                    </span>
+                    <br/>
+                    <i class="price_now">
+                        <em>¥</em>
+                        3769
+                    </i>
+                    <span class="price_pre">
+                        ¥3999
+                    </span>
+                </span>
+                <br/>
+                <span class="progress">
+                    <i>已售15%</i>
+                    <span class="bar">
+                        <span class="bar_in"></span>
+                    </span>
+                </span>
+            </span>
+
+            <span class="right">
+                <a href="#">立即抢购</a>
+            </span>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>

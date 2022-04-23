@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var arr1 = [1, 2, 3, 4, 5, 6, 7];
+        var arr2 = ['a', 'b', 'c', 'd'];
+        //1.连接两个数组 , arr1.concat(arr2) 返回一个新的数组
+        var arr3 = arr1.concat(arr2);
+        console.log(arr3);
+
+        //2.截取数组 arr.slice(begin , end) 包含begin 不包含end ,返回新数组，不影响原数组
+        console.log(arr1.slice(1, 4)); //2,3,4
+        console.log(arr1);
+
+        //3.数组删除 array.splice(start,deleteCount,item2,item2....)  start:从哪个元素开始(从0开始计数)  deleteCount删除元素的个数 item添加的元素
+        //deleteCount: 1.如果大于 arr.length - start 或 省略不写 那么将会删除start后所有的元素 2.如果等于0则会添加元素
+
+
+        // arr1.splice(6,0,'hello');//在下标为2的元素后面增加一个'hello'元素
+
+        // arr1.splice(4, 1, 44);//将index = 4 的元素替换为44
+
+        //arr1.splice(-2,1); //从倒数第二个元素开始，删除一个元素
+        arr1.splice(1);//删除从1开始的所有元素
+        console.log(arr1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

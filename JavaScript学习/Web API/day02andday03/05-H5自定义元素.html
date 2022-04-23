@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- //h5规定，元素自定义属性前面需要加data -->
+    <div data-index="1" data-list-index="2">
+        
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        console.log(div.getAttribute('data-index'));
+
+        //h5新增，获取自定义属性的方法，但是兼容性较差
+        console.log(div.dataset.index);
+        console.log(div.dataset.listIndex);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //方法1， valueOf()
+        var date = new Date();
+        console.log(date.valueOf());
+
+        //方法2 getTime()
+        console.log(date.getTime());
+
+        //方法3 +new Date() 用得最多的
+        var date1 = +new Date();
+        console.log(date1);
+
+        //方法4 h5新增的获得总的秒数 Date.now() 不兼容ie6
+        console.log(Date.now());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            top: 200px;
+
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">点击夏雨荷到500</button>
+    <button class="btn800">点击夏雨荷才800</button>
+
+    <div>夏雨荷</div>
+    <script>
+
+        var div = document.querySelector('div');
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer);
+
+            obj.timer = setInterval(() => {
+                //缓动动画公式每次移动距离：  (目的位置 - 当前位置) / 10
+                //元素移动距离最好是要取整数，大于零就向上取整，小于零就向下取整               
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    //回调函数，当动画执行完毕是执行callback()函数
+                    if(callback){
+                        callback()
+                    }
+                    return ;
+                }
+                div.style.left = div.offsetLeft + step + 'px';
+            }, 10);
+        }
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+
+        btn500.addEventListener('click', function () {
+            animate(div, 500,function(){
+                div.style.backgroundColor = 'green'
+            });
+        });
+        btn800.addEventListener('click', function () {
+            animate(div, 800, function(){
+                div.style.backgroundColor = 'red';
+            });
+        });
+
+    </script>
+</body>
+
+</html>

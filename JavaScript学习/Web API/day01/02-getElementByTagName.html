@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>知否知否，应是绿肥红瘦1</li>
+        <li>知否知否，应是绿肥红瘦2</li>
+        <li>知否知否，应是绿肥红瘦3</li>
+        <li>知否知否，应是绿肥红瘦4</li>
+        <li>知否知否，应是绿肥红瘦5</li>
+    </ul>
+    <ol>
+        <li>昨夜雨疏风骤</li>
+        <li>昨夜雨疏风骤</li>
+        <li>昨夜雨疏风骤</li>
+        <li>昨夜雨疏风骤</li>
+        <li>昨夜雨疏风骤</li>
+    </ol>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);//返回伪数组
+        console.log(lis[0]);
+        for(var i = 0; i < lis.length; i++){
+            console.log(lis[i]);
+        }
+
+        var ol = document.getElementsByTagName('ol');
+        console.log(ol[0].getElementsByTagName('li'));
+    </script>
+</body>
+</html>

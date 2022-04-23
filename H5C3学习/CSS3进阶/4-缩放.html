@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            float: left;
+            list-style: none;
+            width: 225px;
+            height: 137px;
+            overflow: hidden;
+        }
+        ul li a img {
+            transition: transform .3s;
+        }
+        ul li a:hover img{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#"><img src="media/scale.jpg" alt=""></a>
+        </li>
+        <li>
+            <a href="#"><img src="media/scale.jpg" alt=""></a>
+        </li>
+        <li>
+            <a href="#"><img src="media/scale.jpg" alt=""></a>
+        </li>
+        <li>
+            <a href="#"><img src="media/scale.jpg" alt=""></a>
+        </li>
+    </ul>
+</body>
+</html>

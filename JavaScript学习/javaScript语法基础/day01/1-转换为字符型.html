@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换为字符型</title>
+    <script>
+        var num = 10;
+        console.log(num)
+        //1. 数字类型转换为字符串型 toString()
+        var str = num.toString();
+        console.log(typeof str);
+        //2. 数字类型转化为字符串类型 String(变量);
+        var str2 = String(num);
+        console.log(typeof str2);
+        // 3.数值类型转化为字符串类型 利用 + 拼接，隐式转换
+        var str3 = num + "";
+        console.log(typeof str3)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

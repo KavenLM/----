@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //计算1-100整数相加的值
+        //封装函数
+        function getSum() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        //调用函数
+        getSum();
+
+
+        //求任意两个数之间的和
+        function getsum(start, end) {
+            var sum = 0;
+            for (var i = start; i <= end; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getsum(2,10);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

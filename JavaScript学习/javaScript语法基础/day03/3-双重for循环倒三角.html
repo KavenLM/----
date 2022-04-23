@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双重for循环</title>
+    <script>
+        var str = '';
+        for (var i = 10; i >= 1; i--) {
+            for (var j = 1; j <= i; j++) {
+                str += '☆';
+            }
+            str = str + '\n'   //外层循环一次换行       
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var calculator = {
+            jia: function (num1, num2) {
+                return parseInt(num1) + parseInt(num2);
+            },
+            jian: function (num1, num2) {
+                return parseInt(num1) - parseInt(num2);
+            },
+            cheng: function (num1, num2) {
+                return parseInt(num1) * parseInt(num2);
+            },
+            chu: function (num1, num2) {
+                return parseInt(num1) / parseInt(num2);
+            }
+        }
+
+        while (true) {
+            var check = prompt('欢迎使用简易计算器：\n' + '1.加法运算：\n' + '2.减法运算：\n' + '3.乘法运算：\n' + '4.除法运算：\n' + '5.退出：\n' + '请输入您的选项：');
+            switch (parseInt(check)) {
+                case 1:
+                    var num1 = prompt('输入一个数字');
+                    var num2 = prompt('输入一个数字');
+                    var result = calculator.jia(num1, num2);
+                    alert(result);
+                    continue;
+                case 2:
+                    var num1 = prompt('输入一个数字');
+                    var num2 = prompt('输入一个数字');
+                    var result = calculator.jian(num1, num2);
+                    alert(result);
+                    continue;
+                case 3:
+                    var num1 = prompt('输入一个数字');
+                    var num2 = prompt('输入一个数字');
+                    var result = calculator.cheng(num1, num2);
+                    alert(result);
+                    continue;
+                case 4:
+                    var num1 = prompt('输入一个数字');
+                    var num2 = prompt('输入一个数字');
+                    var result = calculator.chu(num1, num2);
+                    alert(result);
+                    continue;
+                case 5:
+                    alert('退出程序');
+                    break;
+                default:
+                    continue;
+            }
+            break;//终止循环
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

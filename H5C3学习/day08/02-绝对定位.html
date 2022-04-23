@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.绝对定位position：absolute，它的移动会相对于父元素移动，如果父元素没有定位会相对于再上一级元素移动,
+        如果所有祖先元素都没有定位那就会相对于浏览器进行定位*/
+        /* 2.绝对定位会脱标 */
+        .grandpa {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: tan;
+        }
+        .father {
+            /* position: relative; */
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        .son {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .bro {
+            width: 200px;
+            height: 200px;
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandpa">
+        <div class="father">
+            <div class="son"></div>
+            <div class="bro"></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

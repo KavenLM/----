@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="search">
+
+    <script>
+        //需求，用户按键盘s键，search框自动获得焦点
+        var input = document.querySelector('input');
+        document.addEventListener('keyup',function(e){
+            // console.log(e.key);
+            if(e.key ==='s' || e.key ==='S'){
+                input.focus();
+            }
+        });
+    </script>
+</body>
+</html>

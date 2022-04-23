@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        div {
+            position: relative;
+            width: 520px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 200px auto;
+            padding-left: 15px;
+        }
+        div ul {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        div ul li {
+            float: left;          
+        }
+        div ul li a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border: 2px solid green;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 12px;
+            margin: 0 10px;
+            transition: transform .1s;
+        }
+        div ul li a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            
+        </ul>
+    </div>
+</body>
+
+</html>

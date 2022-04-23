@@ -1,0 +1,45 @@
+1<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //查找字符串'abcoefoxyozzopp'中'o'的位置以及出现的次数
+        //思路：
+        //1.index = str.indexOf('o')，返回第一个'o'的位置
+        //2.查询第二个'o'，需要将第二参数设置为第一个位置+1，index = str.indexOf('o',index + 1)
+        //3.使用while循环，条件为 index !== -1;
+        var str = 'abcoefoxyozzopp';
+        var idx = str.indexOf('o');
+        var count = 0;
+        var weizhi = [];
+
+        while (idx !== -1) {
+            count++;
+            weizhi.push(idx);
+            idx = str.indexOf('o', idx + 1);
+        }
+
+        // while (true) {
+        //     if (idx != -1) {
+        //         weizhi.push(idx);
+        //         count++;
+        //         idx = str.indexOf('o', idx + 1);
+        //     } else {
+        //         break;
+        //     }
+
+        // }
+        console.log(count);
+        console.log(weizhi);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

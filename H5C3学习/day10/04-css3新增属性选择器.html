@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type] {
+            color: red;
+        }
+        input[type="text"] {
+            color: green;
+        }
+        
+        div[class^="icon"] {
+            color: red;
+        }
+
+        section[class$="data"] {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.选择含有type属性的标签 -->
+    <!-- <input type="text"> -->
+
+    <!-- 2.属性选择器，选择含有 属性="属性值" 的标签 -->
+    <input type="text" id="" name="">
+    <input type"password" id="" name="">
+
+    <!-- 3.以 ... 开头的属性选择器 -->
+    <div class="icon1">洗呀洗呀洗澡澡</div>
+    <div class="icon2">洗呀洗呀洗澡澡</div>
+    <div class="icon3">洗呀洗呀洗澡澡</div>
+    <div class="icon4">洗呀洗呀洗澡澡</div>
+    <div>我是打酱油的</div>
+
+    <!-- 4.属性值以... 结尾的属性选择器 -->
+    <section class="icon1-data">宝宝金水少不了</section>
+    <section class="icon2-data">宝宝金水少不了</section>
+    <section class="icon3-data">宝宝金水少不了</section>
+    <section class="icon4-data">宝宝金水少不了</section>
+    <section>啦啦啦啦</section>
+</body>
+</html>

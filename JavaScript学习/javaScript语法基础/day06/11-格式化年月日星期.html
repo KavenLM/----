@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        console.log(date);
+
+        var year = date.getFullYear();
+        console.log(year);
+        var month = date.getMonth()+1;//month的索引0-11
+        console.log(month);
+        var day = date.getDate();
+        console.log(day);
+        var xingqi = date.getDay();//星期的索引为0-6，星期天为0 星期六为6
+        console.log(xingqi);
+
+        var arr = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+        //格式化日期
+        console.log('今天是：'+year+'年'+month+'月'+day+'日'+arr[xingqi]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

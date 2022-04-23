@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奔跑的熊大</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+        div {
+            position: absolute;
+            bottom: 200px;
+            width: 200px;
+            height: 100px;
+            background: url(media/bear.png) no-repeat;
+            /* 多个动画用，隔开 */
+            animation: bear .5s steps(7) infinite,move 3s linear forwards;
+        }
+        @keyframes bear {
+            0% {
+                background-position: 0;
+            }
+            100% {
+                background-position: -1400px;
+            }
+        }
+        @keyframes move {
+            0%{
+                left: 0;
+            }
+            100% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

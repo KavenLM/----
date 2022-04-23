@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .box {
+
+            height: 50px;
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        ul li {
+            float: left;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            background-color: #333;
+            margin: 0 10px;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            //用输入时间
+            // var str = prompt('请输入时间：');
+            var inputTime = +new Date('2021-11-11');
+            // console.log(inputTime);
+            var h = document.querySelector('.h');
+            var m = document.querySelector('.m');
+            var s = document.querySelector('.s');
+            //先调用一次函数，防止页面加载后会等待一秒中，时间显示不正确
+            getTime();
+            setInterval(getTime, 1000);
+
+            function getTime() {
+                var now = +new Date();
+                // console.log(now);
+                //倒计时毫秒数
+                var time = inputTime - now;
+
+                //得到天
+                var days = parseInt(time / 1000 / 60 / 60 / 24);
+                days = days < 10 ? '0' + days : days;
+                var hours = parseInt(time / 1000 / 60 / 60 % 24);
+                hours = hours < 10 ? '0' + hours : hours;
+                var minutes = parseInt(time / 1000 / 60 % 60);
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                var seconds = parseInt(time / 1000 % 60);
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                //将时间放入盒子里面
+                h.innerHTML = hours;
+                m.innerHTML = minutes;
+                s.innerHTML = seconds;
+                console.log(days + '天' + hours + '时' + minutes + '分' + seconds + '秒');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="h">1</li>
+            <li class="m">2</li>
+            <li class="s">3</li>
+        </ul>
+    </div>
+</body>
+
+</html>

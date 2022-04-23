@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .baidu {
+
+            width: 480px;
+            margin: 200px auto;
+
+        }
+
+        .baidu img {
+            float: left;
+            width: 100px;
+            margin-left: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+    </ul>
+
+    <script>
+        var imgs = document.querySelectorAll('.baidu img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function func() {
+                //将被点击图片的地址this.src，替换给body的背景
+                document.body.style.background = 'url(' + this.src + ') no-repeat';
+            }
+        }
+    </script>
+</body>
+
+</html>

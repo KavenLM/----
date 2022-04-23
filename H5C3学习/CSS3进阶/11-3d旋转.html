@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d旋转</title>
+    <style>
+        
+        div {
+            width: 320px;
+            height: 320px;
+            margin: 100px auto;  
+            perspective: 500px;         
+        }
+        div img {
+            /* transform: translateZ(100px); */
+            transition: transform 2s;
+        }
+        div:hover img {
+            /* 沿着x轴旋转 */
+            /* transform: rotateX(180deg); */
+            /* 沿着y轴旋转 */
+            /* transform: rotateY(180deg); */
+            /* 沿着z轴旋转 */
+            /* transform: rotateZ(180deg); */
+            /* 自定义旋转 矢量旋转*/
+            transform: rotate3d(1,1,0,180deg);
+        }
+    </style>
+</head>
+<body>
+    <div><img src="media/pig.jpg" alt=""></div>
+</body>
+</html>

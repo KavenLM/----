@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.构造函数首字母大写 
+        //2.不需要return就可以返回结果
+        //3.调用构造函数必须使用new
+        //4.只要使用new Star() 调用函数就能创建一个对象 ldh {}
+        //5.属性和方法前面必须要加this.
+        function Star(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang){
+                console.log('唱了一首'+sang);
+            }
+        }
+        var ldh = new Star('刘德华',40,'男');//调用函数返回是一个对象 object
+        console.log(typeof ldh);//object
+        console.log(ldh.name);
+        console.log(ldh['age']);
+        ldh.sing('冰雨');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

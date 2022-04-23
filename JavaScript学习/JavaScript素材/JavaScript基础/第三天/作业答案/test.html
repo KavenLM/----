@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <script>
+        // 1.1 求100以内所有能被3和7整除的数的和
+        // var sum = 0;
+        // for(var i=1; i <= 100; i++){
+        //     if(i % 3 === 0 && i % 7 === 0){
+        //         sum += i;
+        //     }
+        // }
+        // console.log(sum);
+
+        // 2.打印出正金字塔 （1357）
+       /*  for(var i = 1; i <= 4; i++){
+            for(var j = 1; j <= 4 - i; j++){
+                document.write('&ensp; ');
+            }
+            for(var k = 1; k <= 2 * i - 1; k++){
+                document.write('☆');
+            }
+            document.write('<br/>');
+        } */
+
+        // 3.打出倒金字塔
+        for(var i = 4; i >= 1; i--){
+            for(var j = 1; j <= 4 - i; j++){
+                document.write('&ensp; ');
+            }
+            for(var k = 1; k<=2 * i - 1; k++ ){
+                document.write('☆');
+            }
+            document.write('<br/>');
+        }
+
+    </script>
+</body>
+</html>

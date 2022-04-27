@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡属性</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .out {
+            border: 1px solid rgb(209, 42, 26);
+            width: 200px;
+            height: 15px;
+            border-radius: 7px;
+        }
+
+        .in {
+            background-color: rgb(255, 84, 69);
+            width: 50px;
+            height: 15px;
+            transition: all .5s;
+        }
+
+        .in:hover {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div class="in"></div>
+    </div>
+</body>
+
+</html>

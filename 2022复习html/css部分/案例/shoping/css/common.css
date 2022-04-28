@@ -1,4 +1,47 @@
+/* 字体引入 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?oie588');
+    src:  url('../fonts/icomoon.eot?oie588#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?oie588') format('truetype'),
+      url('../fonts/icomoon.woff?oie588') format('woff'),
+      url('../fonts/icomoon.svg?oie588#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+/* 版心 */
 .w {
     width: 1200px;
     margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.style_red {
+    color: red;
+}
+/* 快捷导航栏 */
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+.shortcut ul li {
+    float: left;
+}
+/* 选择所有的偶数小li */
+.shortcut .fr ul li:nth-child(even){
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 15px 0;
+}
+.arrow-icon::after{
+    content: '\e900';
+    font-family: 'icomoon';
+    margin-left: 6px;
 }

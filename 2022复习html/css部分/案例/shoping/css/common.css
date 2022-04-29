@@ -24,7 +24,7 @@
 .style_red {
     color: red;
 }
-/* 快捷导航栏 */
+/* 快捷导航栏制作 */
 .shortcut {
     height: 31px;
     line-height: 31px;
@@ -44,4 +44,10 @@
     content: '\e900';
     font-family: 'icomoon';
     margin-left: 6px;
+}
+
+/* header样式 */
+.header {
+    height: 105px;
+    background-color: pink;
 }

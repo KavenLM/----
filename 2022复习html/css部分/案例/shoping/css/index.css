@@ -1,8 +1,9 @@
 .main {
-    background-color: pink;
+    /* background-color: pink; */
     width: 980px;
     height: 455px;
     margin-left: 220px;
+    margin-top: 10px;
 }
 .focus {
     float: left;
@@ -14,5 +15,41 @@
     float: right;
     width: 250px;
     height: 455px;
-    background-color: skyblue;
+    /* background-color: skyblue; */
+}
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+    /* background-color: pink; */
+}
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding:0 15px;
+}
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+.news-hd .more {
+    float: right;
+}
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\e902';
+}
+.news-bd {
+    padding: 5px 15px 0;
+}
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+}
+.lifeservice {
+    height: 209px;
+    background-color: purple;
+}
+.bargain {
+    margin-top: 5px;
 }

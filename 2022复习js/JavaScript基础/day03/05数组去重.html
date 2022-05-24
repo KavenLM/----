@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var arr = [1,2,3,4,1,2,5,3,1];
-        var newArr = [];
-        for(var i = 0; i < arr.length; i++){
-            for(var j = 0; j < newArr.length; j++){
-                if(arr[i] === newArr[j]){
-                    break;
-                }else{
-                    newArr[newArr.length] = arr[i];
-                    continue;
-                }               
+        var arr = [1, 2, 3, 4, 1, 2, 5, 3, 1];
+
+        function noRepeat(arr) {
+            var newArr = [];
+            //arr.indexOf(值):判断数组中是否存在某元素，存在则返回改值的下标，不存在返回-1
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1 ){
+                        newArr.push(arr[i]);
+                    }
+                }
+                return newArr;
             }
-        }
-        console.log(newArr);
+
+
+            var arr2 = noRepeat(arr);
+            console.log(arr2);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
